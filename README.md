@@ -1,13 +1,4 @@
 # FMEncryp-SQLCipher
----      
-layout: post      
-title:  "SQLCipher 让数据库不再裸奔!"      
-date:   2016-07-08 16:09:57 +0800    
-categories: jekyll update       
----    
-          
-
-# SQLCipher 让数据库不再裸奔
 
 ## 一、 数据库加密，不加密，这是个问题
 
@@ -158,7 +149,7 @@ void* sqlite3Codec(void *iCtx, void *data, Pgno pgno, int mode) {
    1. 重写FMDatabase里面的**- (BOOL)open**和**- (BOOL)openWithFlags:(int)flags vfs:(NSString *)vfsName** 方法，增加设置密码的操作[self setKey:kDBencryptKey]，其中的kDBencryptKey为数据库密钥，通过写一个类目来实现，减小对现有代码的入侵，减低耦合。
    2. 对app中已经存在的数据库，需要先对对数据库进行加密，实现一个数据库加密解密工具类。
 
-编写的类目和工具类地址：[github](https://github.com/muhuashanjin/FMEncryp-SQLCipher.git)
+blog地址：[github](https://muhuashanjin.github.io/jekyll/update/2016/07/08/SQLCipher.html)
 
    
 
